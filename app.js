@@ -4,11 +4,21 @@ class AssignToMyself  {
     this.firepower = 5
     this.accuracy = 0.7
     }
+    shoot(alien){
+        if (Math.random() <= this.accuracy){
+            alien.healthPoints -= this.firepower
+            console.log("hit")
+        } else if (Math.random() > this.accuracy){
+            console.log("miss, Lol")
+        } else {
+            console.log("missed?")
+        }
+    }
+    
 }
 
 const myself = new AssignToMyself()
 //console.log(myself)
-
 
 
 class AssignToAliens {
@@ -20,5 +30,12 @@ class AssignToAliens {
 }
 
 const alien1 = new AssignToAliens()
-console.log(alien1)
+const alien2 = new AssignToAliens()
+const alien3 = new AssignToAliens()
+const alien4 = new AssignToAliens()
+const alien5 = new AssignToAliens()
 
+//console.log(alien1)
+myself.shoot(alien1)
+console.log(myself)
+console.log(alien1)
