@@ -3,6 +3,7 @@ class AssignToMyself  {
     this.healthPoints = 20
     this.firepower = 5
     this.accuracy = 0.7
+    this.retreat = false
     }
 
     shoot(alien){
@@ -16,12 +17,6 @@ class AssignToMyself  {
         }
     }
 
-    retreat(){ // check if this works when leave function is made
-        if (alien == dead){
-            leave()
-            console.log(" i quit")
-        }
-    }
     
 }
 
@@ -46,6 +41,12 @@ class AssignToAliens {
         }}
 }
 
+const killedAlien = () => {
+    if (AssignToAliens.healthPoints <= 0){
+
+    }
+}
+
 const alien1 = new AssignToAliens()
 const alien2 = new AssignToAliens()
 const alien3 = new AssignToAliens()
@@ -57,6 +58,41 @@ const alien5 = new AssignToAliens()
 console.log(myself)
 console.log(alien1)*/
 
+
+const killCounter = 0
+let alienDead = () => {
+    if (AssignToAliens.healthPoints <= 0){
+        killCounter++
+    }
+}
+
+let gameOver = () => {
+    if (AssignToMyself.healthPoints <= 0){
+        console.log("Game over i died lol")
+        //alert("game Over, you lose, lol")
+    } else if(AssignToMyself.retreat){
+        console.log("Game over i quit")
+    } else if(killCounter = 5){
+        console.log(" I win")
+    }
+}
+
+gameOverLoss(myself)
+alien1.shoot(myself)
+alien1.shoot(myself)
+alien1.shoot(myself)
+alien1.shoot(myself)
+alien1.shoot(myself)
+alien1.shoot(myself)
+alien1.shoot(myself)
+alien1.shoot(myself)
+alien1.shoot(myself)
+alien1.shoot(myself)
+alien1.shoot(myself)
+alien1.shoot(myself)
+alien1.shoot(myself)
 alien1.shoot(myself)
 console.log(myself)
 console.log(alien1)
+
+
