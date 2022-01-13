@@ -14,7 +14,8 @@ const myself = new AssignToMyself()
 class AssignToAliens {
     constructor(healthPoints, firepower, accuracy){
         this.healthPoints =  Math.floor((Math.random() * 3) + 3) // gets a number between 0 and 3, then adds 3, thus gives random number between 3 - 6.
-        this.firepower = Math.floor((Math.random))
+        this.firepower = Math.floor((Math.random() * 2) + 2)
+        this.accuracy = Math.round(Math.random() * (8 - 6) + 6) / 10
     }
 }
 
