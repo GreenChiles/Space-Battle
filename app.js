@@ -1,3 +1,16 @@
+const myself = document.querySelector("#myself")
+const attackBtn = document.querySelector("#attack")
+const lazar1 = document.querySelector("#lazar1")
+const lazar2 = document.querySelector("#lazar2")
+const lazar3 = document.querySelector("#lazar3")
+const lazar4 = document.querySelector("#lazar4")
+const alien1 = document.querySelector("#alien1")
+const alien2 = document.querySelector("#alien2")
+const alien3 = document.querySelector("#alien3")
+const alien4 = document.querySelector("#alien4")
+const alien5 = document.querySelector("#alien5")
+const alien6 = document.querySelector("#alien6")
+
 class AssignToMyself  {
     constructor(healthPoints, firepower, accuracy){
     this.healthPoints = 20
@@ -47,6 +60,10 @@ const killedAlien = () => {
     }
 }
 
+const lazarAnimation = () => {
+
+}
+
 const alien1 = new AssignToAliens()
 const alien2 = new AssignToAliens()
 const alien3 = new AssignToAliens()
@@ -72,7 +89,7 @@ let gameOver = () => {
         //alert("game Over, you lose, lol")
     } else if(AssignToMyself.retreat){
         console.log("Game over i quit")
-    } else if(killCounter = 5){
+    } else if(killCounter = 6){
         console.log(" I win")
     }
 }
